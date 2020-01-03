@@ -1,0 +1,107 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url(fonts/PressStart2P-Regular.ttf)
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 36px;
+    line-height: 36px;
+    background: #2D2D2D;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+h1 {
+    font-family: 'Press Start 2P';
+    color: white;
+    font-size: 19px;
+    margin-left: 6px;
+}
+
+nav {
+    display: flex;
+}
+
+header .nav-button { 
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding: 0 10px;
+    border-style: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    background-color: gold;
+    transition: 0.3s background-color;
+    margin: 6px 6px 6px 0;
+}
+
+header .nav-button:hover {
+    background-color: white;
+}
+
+.about-app {
+    display: flex;
+    background: url(images/background.png);
+    height: 490px;
+    padding: 20px;
+}
+
+.about-app__text {
+    padding: 40px 30px 0 0;
+}
+
+.about-app__text h2{
+    font-weight: 400;
+    font-size: 38px;
+    color: white;
+}
+
+.about-app__text p{
+    font-size: 20px;
+    color: #ccc;
+    margin: 20px 0;
+}
+
+.about-app .screenshot {
+    width: 800px;
+    border-radius: 5px;
+    box-shadow: -5px 5px 15px 0px rgba(0,0,0,0.75);
+
+}
+
+.about-app .nav-button {
+    height: 50px;
+    line-height: 50px;
+    color: #333;
+    background: gold;
+    font-size: 1.3em;
+    text-shadow: none;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    border-style: none;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    margin-right: 10px;
+    padding: 0 10px;
+} 
+
+.about-app .nav-button:hover {
+    background-color: white;
+}
+
+
