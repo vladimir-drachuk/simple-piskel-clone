@@ -104,4 +104,30 @@ header .nav-button:hover {
     background-color: white;
 }
 
+.examples {
+    position: relative;
+    height: 200px;
+    background: url(images/background.png);
+    z-index: -1;
+}
+
+.examples::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+.examples h2 {
+    color: white;
+    margin-left: 5px;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-shadow: none;
+}
 
