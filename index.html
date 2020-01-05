@@ -4,56 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <script type="text/javascript" src="./gif-scripts/LZWEncoder.js"></script>
     <script type="text/javascript" src="./gif-scripts/NeuQuant.js"></script>
     <script type="text/javascript" src="./gif-scripts/GIFEncoder.js"></script>
 
-    <link href="./images/favicon.png" rel="shortcut icon" type="image/png">
-    <title>Simple-piskel-clone</title>
-<link href="style.css?8b0c5645376e135f4cb6" rel="stylesheet"></head>
-<body>
-    <div class="wrapper"></div>
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-          apiKey: "AIzaSyCDMM_bonnST-eMQb7WBsMLYabP1o426uc",
-          authDomain: "simple-piskel-clone-caca9.firebaseapp.com",
-          databaseURL: "https://simple-piskel-clone-caca9.firebaseio.com",
-          projectId: "simple-piskel-clone-caca9",
-          storageBucket: "simple-piskel-clone-caca9.appspot.com",
-          messagingSenderId: "974544426259",
-          appId: "1:974544426259:web:90ca7619aea983b49236e6",
-          measurementId: "G-DYKKF6NDTX"
-        };
 
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        const provider = new firebase.auth.GoogleAuthProvider();
-        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
-        
-        firebase.auth().signInWithPopup(provider).then((result) => {
-            console.log(result);
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
-            // ...
-            }).catch((error) => {
-                console.log(error);
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
-        });
-
-      </script>
-<script type="text/javascript" src="bundle.js?8b0c5645376e135f4cb6"></script></body>
+    <link href="./images/favicon.png" rel="shortcut icon" type="image/png">
+    <title>Simple-piskel-clone</title>
+<link href="style.css?ba144bb70e78d84f42bf" rel="stylesheet"></head>
+<body>
+    <div class="wrapper"></div>
+<script type="text/javascript" src="bundle.js?ba144bb70e78d84f42bf"></script></body>
 </html>
