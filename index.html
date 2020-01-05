@@ -4,69 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Simple-piskel preview</title>
-    <link href="./src/style.css" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <h1>SiMPLE PiSKEL CLONE</h1>
-        <nav>
-            <a href="#" class="nav-button">Create Sprite</a>
-            <a href="#" class="nav-button">Sing in</a>
-        </nav>
-    </header>
-    <main>
-        <section class="about-app">
-            <div class="container">
-                <div class="about-app__text">
-                    <h2>Simple piskel clone is a basic clone of the popular sprite editor.
-                        It's <strong> free online editor for animated sprites</strong> & <strong>art</strong></h2>
-                    <p>Create animations in your browser.
-                        Try an example, use Google sign in to access your gallery or simply create a new sprite.</p>
-                    <nav>
-                        <a href="#" class="nav-button">Sing in</a>
-                        <a href="#" class="nav-button">Create Sprite</a>
-                    </nav>
-                </div>
-                <div class="about-app__screenshot">
-                    <img class="screenshot" src="./src/images/table.png" alt="screenshot">
-                </div>
-            </div>
-        </section>
-        <section class="examples">
-            <div class="container">
-                <div class="canvas-wrapper">
-                    <h2>Example sprites</h2>
-                    <p>Here are some examples of user submitted sprites.</p>
-                    <img class="gif" src="src/images/gifs/cat.gif" alt="cat">
-                    <img class="gif" src="src/images/gifs/bulbazavr.gif" alt="bulb">
-                    <img class="gif" src="src/images/gifs/black-and-white.gif" alt="b&w">
-                    <img class="gif" src="src/images/gifs/money.gif" alt="money">
-                    <img class="gif" src="src/images/gifs/packman-enemy.gif" alt="packman-enemy">
-                    <img class="gif" src="src/images/gifs/penguin.gif" alt="pin">
-                </div>
-            </div>
-        </section>
-        <section class="about-author">
-            <div class="wrapper">
-                <h2>About Author</h2>
-                <div class="about-text">
-                    <img src="src/images/author.jpg" alt="photo">
-                    <p>Vladimir Drachuk is the RS student and novice front-end developer. 
-                        Throughout his studies, he showed high learning ability and good potential. 
-                        Among his famous works such as <a href="https://vladimir-drachuk.github.io/fancy-weather/">fancy-weather</a>,
-                        <a href="https://vladimir-drachuk.github.io/codejam-virtual-keyboard/">virtual-keyboard</a>,
-                        <a href="http://image-api-vvdra4.netlify.com/">image-api</a> and etc.
-                        Now he is finishing The Rolling Scopes Courses 
-                        and is ready to begining his hard coding work.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <img src="src/images/logo_transparent_small_compact.png">
-    </footer>
-</body>
-</html>
+    <script type="text/javascript" src="./gif-scripts/LZWEncoder.js"></script>
+    <script type="text/javascript" src="./gif-scripts/NeuQuant.js"></script>
+    <script type="text/javascript" src="./gif-scripts/GIFEncoder.js"></script>
 
+    <link href="./images/favicon.png" rel="shortcut icon" type="image/png">
+    <title>Simple-piskel-clone</title>
+<link href="style.css?8b0c5645376e135f4cb6" rel="stylesheet"></head>
+<body>
+    <div class="wrapper"></div>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCDMM_bonnST-eMQb7WBsMLYabP1o426uc",
+          authDomain: "simple-piskel-clone-caca9.firebaseapp.com",
+          databaseURL: "https://simple-piskel-clone-caca9.firebaseio.com",
+          projectId: "simple-piskel-clone-caca9",
+          storageBucket: "simple-piskel-clone-caca9.appspot.com",
+          messagingSenderId: "974544426259",
+          appId: "1:974544426259:web:90ca7619aea983b49236e6",
+          measurementId: "G-DYKKF6NDTX"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const provider = new firebase.auth.GoogleAuthProvider();
+        provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
+        
+        firebase.auth().signInWithPopup(provider).then((result) => {
+            console.log(result);
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            var token = result.credential.accessToken;
+            // The signed-in user info.
+            var user = result.user;
+            // ...
+            }).catch((error) => {
+                console.log('error');
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            // The email of the user's account used.
+            var email = error.email;
+            // The firebase.auth.AuthCredential type that was used.
+            var credential = error.credential;
+            // ...
+        });
+
+      </script>
+<script type="text/javascript" src="bundle.js?8b0c5645376e135f4cb6"></script></body>
+</html>
