@@ -191,6 +191,11 @@ header .nav-button:hover {
     font-size: 16px;
 }
 
+.about-author .about-text p .name{
+    text-decoration: none;
+    color: lightblue;
+}
+
 .about-author .about-text a {
     cursor: pointer;
 }
@@ -207,7 +212,12 @@ footer {
     height: 118px;
 }
 
-footer img {
+footer .github {
+    display: flex;
+
+}
+
+footer .piskel-img {
     height: 30px;
     margin-bottom: 10px; 
 }
